@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>movediv</title>
+</head>
+<link href="index.css" rel="stylesheet">
+<body>
+
+<div id="obj" style="position : relative; left : 150px; top : 150px;"><img src="maxresdefault.jpg" height="150px" width="150px"></div>
+<script>
+    window.addEventListener('load', function () {
+        var O = document.getElementById('obj'),
+            X = 0,
+            Y = 0,mouseX=0,mouseY=0;
+        window.addEventListener('mousemove', function (ev) {
+            ev = window.event;
+            X=ev.pageX;
+            Y=ev.pageY;
+        });
+        function move() {
+            console.log(X,Y);
+            O.style.left = X-100 + 'px';
+            O.style.top = Y-150 + 'px';
+            setTimeout(move, 1);
+        }
+        move();
+
+    });
+</script>
+</body>
+
+</html>
