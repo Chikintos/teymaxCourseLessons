@@ -1,0 +1,11 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+div{
+    height: 100px;
+    width: 200px;
+    border-radius: 15px;
+    background: linear-gradient(to bottom,aquamarine,deepskyblue);
+}
